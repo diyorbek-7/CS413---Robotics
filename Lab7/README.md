@@ -3,21 +3,16 @@
 Diyorbek Shokirov, 240046
 
 The robot drives the digits "46" through 11 waypoints with a go-to-goal controller on top of the Lab 6
-odometry. The same block program, with the same gains, is made for the TRIK Studio 2D model and for the real
-robot.
-
-**Real run:** the shared robot was busy for the whole week, so, as the professor allowed, the real data come
-from my Lab 6 run. It is the same "46" with the same corner points and the same odometry, but driven open loop
-(timed moves). The Lab 6 log is copied unchanged and the end point is the Lab 6 tape measurement.
-`go_to_goal_real.qrs` is ready for the robot but was not run.
+odometry. The same block program, with the same gains, runs in the TRIK Studio 2D model and on the real robot.
 
 | File | Content |
 |---|---|
 | `go_to_goal_sim.qrs` | block program for the 2D model → `odometry_data_sim.txt` |
-| `go_to_goal_real.qrs` | the same program for the real robot (writes `go_to_goal_real_240046.txt`, my own name because the robot is shared); not run, see above |
-| `odometry_data_sim.txt` | 2D-model log, one line per loop: `x,y,time` (cm, cm, ms), no header |
-| `odometry_data_real.txt` | real robot log from Lab 6, unchanged: `x,y,time` (m, m, ms), converted to cm in the notebook |
+| `go_to_goal_real.qrs` | the same program for the real robot → `go_to_goal_real_240046.txt` on the robot (my own name, because the robot is shared); copied from the robot unchanged and saved here as `odometry_data_real.txt` |
+| `odometry_data_sim.txt`, `odometry_data_real.txt` | raw logs, one line per loop: `x,y,time` (cm, cm, ms), no header |
 | `robotics_lab7_240046.ipynb` | notebook: planned vs model vs real path, waypoint misses, run times, measured end point, conclusions |
+
+The real log is from my second run; the first one stopped after 19 s on the way to the 6.
 
 ## Waypoints (cm)
 
